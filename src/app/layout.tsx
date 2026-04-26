@@ -20,39 +20,42 @@ const siteUrl = "https://zagorovsky.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Denys Zagorovsky — Software Engineering Student",
-    template: "%s · Denys Zagorovsky",
+    default: "Denys Zahorovskyi — Fullstack Developer",
+    template: "%s · Denys Zahorovskyi",
   },
   description:
-    "Portfolio of Denys Zagorovsky, a software engineering student at Zhytomyr Polytechnic building modern web applications with React, Next.js and TypeScript.",
+    "Portfolio of Denys Zahorovskyi, a software engineering student at Zhytomyr Polytechnic building modern fullstack web applications with React, Next.js, TypeScript, C# and Java.",
   keywords: [
+    "Denys Zahorovskyi",
     "Denys Zagorovsky",
     "Денис Загоровський",
     "portfolio",
+    "fullstack developer",
     "software engineering",
     "Zhytomyr Polytechnic",
     "Житомирська політехніка",
     "React",
     "Next.js",
     "TypeScript",
-    "frontend developer",
+    "C#",
+    "Java",
   ],
-  authors: [{ name: "Denys Zagorovsky" }],
-  creator: "Denys Zagorovsky",
+  authors: [{ name: "Denys Zahorovskyi" }],
+  creator: "Denys Zahorovskyi",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Denys Zagorovsky — Software Engineering Student",
+    title: "Denys Zahorovskyi — Fullstack Developer",
     description:
-      "Portfolio of Denys Zagorovsky — modern web apps with React, Next.js and TypeScript.",
-    siteName: "Denys Zagorovsky Portfolio",
+      "Portfolio of Denys Zahorovskyi — fullstack web apps with React, Next.js, TypeScript, C# and Java.",
+    siteName: "Denys Zahorovskyi Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Denys Zagorovsky — Software Engineering Student",
+    title: "Denys Zahorovskyi — Fullstack Developer",
     description:
-      "Portfolio of Denys Zagorovsky — modern web apps with React, Next.js and TypeScript.",
+      "Portfolio of Denys Zahorovskyi — fullstack web apps with React, Next.js, TypeScript, C# and Java.",
   },
   robots: {
     index: true,
