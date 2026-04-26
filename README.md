@@ -1,6 +1,6 @@
-# Denys Zagorovsky — Portfolio
+# Denys Zahorovskyi — Portfolio
 
-Modern, minimalist portfolio site for **Denys Zagorovsky**, a 2nd-year Software Engineering student at **Zhytomyr Polytechnic State University**.
+Modern, minimalist portfolio site for **Denys Zahorovskyi**, a 2nd-year Software Engineering student at **Zhytomyr Polytechnic State University**.
 
 ## Tech stack
 
@@ -43,6 +43,18 @@ npm start
 npm run typecheck
 npm run lint
 ```
+
+## Editing content
+
+See **[CONTENT.md](./CONTENT.md)** for a non-developer-friendly guide to changing text, adding projects, updating skills, changing contacts, and SEO metadata. The short version:
+
+| Change | File |
+|---|---|
+| Texts & translations | `src/i18n/dictionaries.ts` |
+| Projects list | `src/data/projects.ts` |
+| Skills / tech stack | `src/data/skills.ts` |
+| Contact details | `src/data/contact.ts` |
+| SEO & site metadata | `src/app/layout.tsx` |
 
 ## Adding a new project
 
@@ -151,4 +163,4 @@ Works on Netlify, Cloudflare Pages, Render, or plain S3/nginx. If you're not dep
 
 ## License
 
-MIT © Denys Zagorovsky
+MIT © Denys Zahorovskyi

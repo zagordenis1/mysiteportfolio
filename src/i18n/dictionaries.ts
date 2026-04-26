@@ -16,9 +16,9 @@ export const dictionaries = {
     hero: {
       greeting: "Привіт, я",
       name: "Денис Загоровський",
-      role: "Студент-програміст · Frontend Developer",
+      role: "Студент-програміст · Fullstack Developer",
       tagline:
-        "Створюю сучасні, швидкі та красиві вебзастосунки на React, Next.js і TypeScript.",
+        "Створюю сучасні вебзастосунки від фронтенду до бекенду — React, Next.js, TypeScript, C# і Java.",
       cta: "Подивитися проєкти",
       ctaSecondary: "Зв’язатися",
       status: "Доступний для стажування та співпраці",
@@ -36,7 +36,7 @@ export const dictionaries = {
       },
       focusTitle: "Головний фокус",
       focusItems: [
-        "Frontend-розробка (React / Next.js)",
+        "Fullstack-розробка (React / Next.js + C# / Java)",
         "TypeScript і типобезпечна архітектура",
         "UI/UX, анімації та доступність",
         "Алгоритми та структури даних",
@@ -85,10 +85,10 @@ export const dictionaries = {
     },
     hero: {
       greeting: "Hi, I’m",
-      name: "Denys Zagorovsky",
-      role: "Software Engineering Student · Frontend Developer",
+      name: "Denys Zahorovskyi",
+      role: "Software Engineering Student · Fullstack Developer",
       tagline:
-        "I build modern, fast and beautiful web applications with React, Next.js and TypeScript.",
+        "I build modern web applications end-to-end — from React and Next.js frontends to C# and Java backends.",
       cta: "View projects",
       ctaSecondary: "Get in touch",
       status: "Open to internships & collaboration",
@@ -106,7 +106,7 @@ export const dictionaries = {
       },
       focusTitle: "Current focus",
       focusItems: [
-        "Frontend development (React / Next.js)",
+        "Fullstack development (React / Next.js + C# / Java)",
         "TypeScript and type-safe architecture",
         "UI/UX, animations and accessibility",
         "Algorithms and data structures",

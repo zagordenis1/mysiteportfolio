@@ -16,6 +16,8 @@ export const skillGroups: Record<SkillGroupKey, Skill[]> = {
   language: [
     { name: "TypeScript", level: 82 },
     { name: "JavaScript", level: 90 },
+    { name: "C#", level: 75 },
+    { name: "Java", level: 70 },
     { name: "C++", level: 65 },
     { name: "Python", level: 60 },
     { name: "SQL", level: 58 },
