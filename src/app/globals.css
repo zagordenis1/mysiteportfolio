@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 250 252;
+  --fg: 15 15 20;
+  --muted: 100 100 110;
+  --card: 255 255 255;
+  --border: 0 0 0;
+  --accent: 99 102 241;
+}
+
+.dark {
+  --bg: 8 10 18;
+  --fg: 235 235 245;
+  --muted: 160 160 175;
+  --card: 18 20 30;
+  --border: 255 255 255;
+  --accent: 129 140 248;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .text-muted {
+    color: rgb(var(--muted));
+  }
+  .bg-card {
+    background-color: rgb(var(--card));
+  }
+  .border-soft {
+    border-color: rgba(var(--border), 0.08);
+  }
+  .glass {
+    background-color: rgba(var(--card), 0.6);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border: 1px solid rgba(var(--border), 0.08);
+  }
+  .gradient-text {
+    background: linear-gradient(
+      120deg,
+      rgb(var(--accent)) 0%,
+      #ec4899 50%,
+      rgb(var(--accent)) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-x 8s ease infinite;
+  }
+  .noise-bg {
+    background-image: radial-gradient(
+        circle at 20% 10%,
+        rgba(99, 102, 241, 0.18),
+        transparent 40%
+      ),
+      radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.14), transparent 45%),
+      radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.12), transparent 45%);
+  }
+}
+
+::selection {
+  background-color: rgba(99, 102, 241, 0.35);
+  color: white;
+}
+
+*:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
