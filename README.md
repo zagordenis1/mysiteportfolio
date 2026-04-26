@@ -115,13 +115,39 @@ src/
 
 ## Deployment
 
-Deploy for free to **[Vercel](https://vercel.com/)**:
+### Option A — GitHub Pages (configured, zero-config for you)
 
-1. Push this repo to GitHub.
-2. Import the repo in Vercel — no configuration required.
-3. Vercel detects Next.js automatically and builds `npm run build`.
+This repo ships with a GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the site as a fully static export (`next build` → `out/`) and publishes it to **GitHub Pages** on every push to `main`.
 
-Any static host that runs `next build && next start` (or that supports Next.js SSR/SSG) will work — Cloudflare Pages, Netlify, Render, Fly.io, Railway.
+One-time setup (only needed once per repo):
+
+1. On GitHub, go to **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **"GitHub Actions"**.
+3. Push to `main` (or re-run the latest workflow) — the site deploys to:
+
+   ```
+   https://<your-github-username>.github.io/mysiteportfolio/
+   ```
+
+The workflow sets `NEXT_PUBLIC_BASE_PATH=/mysiteportfolio` so assets resolve at the subpath, and adds a `.nojekyll` file so GitHub Pages doesn't strip `_next/` folders.
+
+### Option B — Vercel (recommended for custom domains and previews)
+
+1. Push this repo to GitHub (already done).
+2. Import it at https://vercel.com/new.
+3. Vercel auto-detects Next.js — click **Deploy**.
+
+Preview deployments run on every PR. Custom domains are free.
+
+### Other hosts
+
+Any static host can serve `out/`:
+
+```bash
+npm run build    # produces ./out
+```
+
+Works on Netlify, Cloudflare Pages, Render, or plain S3/nginx. If you're not deploying to a subpath, unset `NEXT_PUBLIC_BASE_PATH` (it defaults to empty).
 
 ## License
 
