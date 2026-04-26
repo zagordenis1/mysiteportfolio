@@ -1,64 +1,64 @@
-# Denys Zahorovskyi — Portfolio
+# Денис Загоровський — Портфоліо
 
-Modern, minimalist portfolio site for **Denys Zahorovskyi**, a 2nd-year Software Engineering student at **Zhytomyr Polytechnic State University**.
+Сучасний мінімалістичний сайт-портфоліо **Дениса Загоровського** — студента 2 курсу спеціальності «Інженерія програмного забезпечення» **Державного університету «Житомирська політехніка»**.
 
-## Tech stack
+## Технологічний стек
 
 - **Next.js 14** (App Router) + **React 18** + **TypeScript**
-- **Tailwind CSS** for styling with custom design tokens
-- **Framer Motion** for animations
-- **next-themes** for dark / light mode
-- **lucide-react** icons
-- **Inter** + **Space Grotesk** via `next/font`
-- Custom **i18n** (Ukrainian 🇺🇦 / English 🇬🇧) via React Context
+- **Tailwind CSS** для стилізації з власними design-токенами
+- **Framer Motion** для анімацій
+- **next-themes** для темної / світлої теми
+- Іконки **lucide-react**
+- Шрифти **Inter** + **Space Grotesk** через `next/font`
+- Власна **i18n**-система (українська 🇺🇦 / англійська 🇬🇧) на React Context
 
-## Features
+## Можливості
 
-- Fully responsive (mobile-first)
-- Dark & light themes with smooth switching
-- UK / EN language toggle with persistence in `localStorage`
-- Glassmorphism navbar, gradient typography, grid background, noise glow
-- Scroll-triggered animations (Framer Motion `whileInView`)
-- Hover-polished project cards with gradient accents
-- Copy-to-clipboard for contact details
-- SEO: rich `<meta>`, Open Graph, Twitter, `sitemap.xml`, `robots.txt`
-- Lazy-loading of fonts & icons; code-splitting handled by Next.js
+- Повністю адаптивний дизайн (mobile-first)
+- Темна та світла теми з плавним перемиканням
+- Перемикач мов UK / EN із збереженням вибору в `localStorage`
+- Glassmorphism-навбар, градієнтна типографіка, grid-фон, noise glow
+- Анімації при скролі (Framer Motion `whileInView`)
+- Картки проєктів з відшліфованими hover-ефектами та градієнтними акцентами
+- Копіювання контактних даних у буфер обміну
+- SEO: повний `<meta>`, Open Graph, Twitter, `sitemap.xml`, `robots.txt`
+- Lazy-loading шрифтів та іконок; code-splitting забезпечує Next.js
 
-## Getting started
+## Як запустити
 
-Requirements: **Node.js ≥ 18.17**.
+Вимоги: **Node.js ≥ 18.17**.
 
 ```bash
-# install dependencies
+# встановити залежності
 npm install
 
-# run dev server (http://localhost:3000)
+# dev-сервер (http://localhost:3000)
 npm run dev
 
-# production build
+# продакшн-збірка
 npm run build
 npm start
 
-# type-check & lint
+# перевірка типів та лінтер
 npm run typecheck
 npm run lint
 ```
 
-## Editing content
+## Редагування контенту
 
-See **[CONTENT.md](./CONTENT.md)** for a non-developer-friendly guide to changing text, adding projects, updating skills, changing contacts, and SEO metadata. The short version:
+Детальний гайд для нерозробників — у файлі **[CONTENT.md](./CONTENT.md)** (зміна текстів, додавання проєктів, оновлення скілів, контактів та SEO-метаданих). Коротка версія:
 
-| Change | File |
+| Що міняти | Файл |
 |---|---|
-| Texts & translations | `src/i18n/dictionaries.ts` |
-| Projects list | `src/data/projects.ts` |
-| Skills / tech stack | `src/data/skills.ts` |
-| Contact details | `src/data/contact.ts` |
-| SEO & site metadata | `src/app/layout.tsx` |
+| Тексти та переклади | `src/i18n/dictionaries.ts` |
+| Список проєктів | `src/data/projects.ts` |
+| Скіли / технології | `src/data/skills.ts` |
+| Контактні дані | `src/data/contact.ts` |
+| SEO та метадані сайту | `src/app/layout.tsx` |
 
-## Adding a new project
+## Як додати новий проєкт
 
-All projects live in a single file — `src/data/projects.ts`. Just append a new entry:
+Усі проєкти живуть в одному файлі — `src/data/projects.ts`. Достатньо додати новий запис:
 
 ```ts
 {
@@ -78,28 +78,28 @@ All projects live in a single file — `src/data/projects.ts`. Just append a new
 },
 ```
 
-The site will render the new card automatically with animations, hover effects and responsive layout.
+Сайт автоматично відрендерить нову картку з анімаціями, hover-ефектами та адаптивним макетом.
 
-## Editing text & translations
+## Редагування текстів та перекладів
 
-All copy lives in `src/i18n/dictionaries.ts`. Edit the `uk` and `en` objects in parallel to keep both languages in sync.
+Усі тексти знаходяться в `src/i18n/dictionaries.ts`. Редагуйте обʼєкти `uk` та `en` паралельно, щоб обидві мови залишались синхронізованими.
 
-## Updating skills
+## Оновлення скілів
 
-Skills are grouped in `src/data/skills.ts` by category (`frontend`, `language`, `tooling`, `learning`). Add a new object `{ name, level }` — `level` is an optional 0–100 number used for the animated progress bar.
+Скіли згруповані в `src/data/skills.ts` за категоріями (`frontend`, `language`, `tooling`, `learning`). Додайте новий об'єкт `{ name, level }` — `level` це опціональне число 0–100, яке використовується для анімованого прогрес-бару.
 
-## Updating contact details
+## Оновлення контактів
 
-Edit `src/data/contact.ts` (email, Telegram, GitHub).
+Редагуйте `src/data/contact.ts` (email, Telegram, GitHub).
 
-## Project structure
+## Структура проєкту
 
 ```
 src/
 ├─ app/               # Next.js App Router
-│  ├─ layout.tsx      # Root layout, fonts, metadata
-│  ├─ page.tsx        # Landing page
-│  ├─ globals.css     # Tailwind + design tokens
+│  ├─ layout.tsx      # Кореневий layout, шрифти, метадані
+│  ├─ page.tsx        # Лендінг
+│  ├─ globals.css     # Tailwind + design-токени
 │  ├─ sitemap.ts      # SEO
 │  ├─ robots.ts       # SEO
 │  └─ icon.svg        # Favicon
@@ -116,7 +116,7 @@ src/
 │     ├─ skills.tsx
 │     ├─ projects.tsx
 │     └─ contact.tsx
-├─ data/              # Source of truth for content
+├─ data/              # Джерело правди для контенту
 │  ├─ projects.ts
 │  ├─ skills.ts
 │  └─ contact.ts
@@ -125,42 +125,42 @@ src/
    └─ use-translations.tsx
 ```
 
-## Deployment
+## Деплой
 
-### Option A — GitHub Pages (configured, zero-config for you)
+### Варіант A — GitHub Pages (вже налаштовано, нічого додатково робити не треба)
 
-This repo ships with a GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the site as a fully static export (`next build` → `out/`) and publishes it to **GitHub Pages** on every push to `main`.
+Репозиторій містить GitHub Actions workflow `.github/workflows/deploy.yml`, який збирає сайт як повністю статичний експорт (`next build` → `out/`) і публікує його на **GitHub Pages** при кожному пуші в `main`.
 
-One-time setup (only needed once per repo):
+Одноразове налаштування (потрібно зробити один раз для репозиторію):
 
-1. On GitHub, go to **Settings → Pages**.
-2. Under **Build and deployment → Source**, choose **"GitHub Actions"**.
-3. Push to `main` (or re-run the latest workflow) — the site deploys to:
+1. На GitHub перейдіть у **Settings → Pages**.
+2. У розділі **Build and deployment → Source** виберіть **«GitHub Actions»**.
+3. Запуште коміт у `main` (або перезапустіть останній workflow) — сайт буде доступний за адресою:
 
    ```
-   https://<your-github-username>.github.io/mysiteportfolio/
+   https://<ваш-github-username>.github.io/mysiteportfolio/
    ```
 
-The workflow sets `NEXT_PUBLIC_BASE_PATH=/mysiteportfolio` so assets resolve at the subpath, and adds a `.nojekyll` file so GitHub Pages doesn't strip `_next/` folders.
+Workflow задає змінну `NEXT_PUBLIC_BASE_PATH=/mysiteportfolio`, щоб ассети резолвились на підшляху, і додає файл `.nojekyll`, щоб GitHub Pages не вирізав теки `_next/`.
 
-### Option B — Vercel (recommended for custom domains and previews)
+### Варіант B — Vercel (рекомендується для власних доменів та preview-деплоїв)
 
-1. Push this repo to GitHub (already done).
-2. Import it at https://vercel.com/new.
-3. Vercel auto-detects Next.js — click **Deploy**.
+1. Запуште репозиторій на GitHub (вже зроблено).
+2. Імпортуйте його на https://vercel.com/new.
+3. Vercel сам визначить Next.js — натисніть **Deploy**.
 
-Preview deployments run on every PR. Custom domains are free.
+Preview-деплої запускаються для кожного PR. Власні домени — безкоштовно.
 
-### Other hosts
+### Інші хостинги
 
-Any static host can serve `out/`:
+Будь-який статичний хостинг здатен віддавати теку `out/`:
 
 ```bash
-npm run build    # produces ./out
+npm run build    # створює ./out
 ```
 
-Works on Netlify, Cloudflare Pages, Render, or plain S3/nginx. If you're not deploying to a subpath, unset `NEXT_PUBLIC_BASE_PATH` (it defaults to empty).
+Працює на Netlify, Cloudflare Pages, Render або звичайному S3/nginx. Якщо ви деплоїте не на підшлях — приберіть `NEXT_PUBLIC_BASE_PATH` (за замовчуванням він порожній).
 
-## License
+## Ліцензія
 
 MIT © Denys Zahorovskyi
